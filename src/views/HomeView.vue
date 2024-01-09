@@ -28,5 +28,7 @@
     <TheWelcome />
 
     <p>{{ message }}</p>
+
+    <input type="text" v-model="message">
   </main>
 </template>
