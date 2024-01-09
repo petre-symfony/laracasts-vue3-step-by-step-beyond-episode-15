@@ -8,7 +8,7 @@
       let message = ref('Hello World!');
 
       setTimeout(() => {
-        message = 'I have been changed'
+        message.value = 'I have been changed'
       }, 2000);
 
       return {
