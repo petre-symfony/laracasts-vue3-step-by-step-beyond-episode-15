@@ -1,4 +1,4 @@
-<script>
+<script setup>
   import TheWelcome from '../components/TheWelcome.vue';
   import { onMounted, ref } from "vue";
 
