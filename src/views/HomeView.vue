@@ -7,6 +7,10 @@
     setup() {
       let message = ref('Hello World!');
 
+      setTimeout(() => {
+        message = 'I have been changed'
+      }, 2000);
+
       return {
         message
       }
