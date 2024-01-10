@@ -9,7 +9,7 @@ import flash from "@/mixins/flash.js";
 <template>
   <main>
     <p>
-      <button @click="flash('It works!')">Click Me</button>
+      <button @click="message">Click Me</button>
     </p>
   </main>
 </template>
