@@ -3,11 +3,6 @@
 
  let food = useStorage('food');
  let age = useStorage('age')
-
- let obj = useStorage('obj', { one: 'one'})
- setTimeout(() => {
-   obj.value = {'changed': 'entirely'}
- }, 2000);
 </script>
 
 <template>
