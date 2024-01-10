@@ -3,33 +3,30 @@
 
   let textarea = ref(null);
 
-  onMounted(() => {
-    textarea.value.addEventListener('keydown', (e) => {
-      let t = textarea.value;
-      //tab was pressed
-      if (e.keyCode === 9) {
-        // get caret position/selection
-        let val = t.value,
-            start = t.selectionStart,
-            end = t.selectionEnd;
+  function onKeyDown(e) {
+    let t = textarea.value;
+    //tab was pressed
+    if (e.keyCode === 9) {
+      // get caret position/selection
+      let val = t.value,
+          start = t.selectionStart,
+          end = t.selectionEnd;
 
-        //set textarea value to: text before caret + tab + text after caret
-        t.value = val.substring(0, start) + "\t" + val.substring(end);
+      //set textarea value to: text before caret + tab + text after caret
+      t.value = val.substring(0, start) + "\t" + val.substring(end);
 
-        //got caret at right position again
-        t.selectionStart = t.selectionEnd = start + 1;
+      //got caret at right position again
+      t.selectionStart = t.selectionEnd = start + 1;
 
-        e.preventDefault();
-      }
-    });
-  })
-
+      e.preventDefault();
+    }
+  }
 </script>
 
 <template>
   <main>
     <form >
-      <textarea ref="textarea" style="width: 100%; height: 300px">Hi there</textarea>
+      <textarea ref="textarea" @keydown="onKeyDown" style="width: 100%; height: 300px">Hi there</textarea>
     </form>
   </main>
 </template>
