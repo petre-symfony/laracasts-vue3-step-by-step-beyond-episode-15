@@ -3,6 +3,10 @@
   import {ref} from "vue";
 
   let comment = ref('test value');
+
+  setTimeout(() => {
+    comment.value = 'It work!'
+  }, 3000)
 </script>
 
 <template>
