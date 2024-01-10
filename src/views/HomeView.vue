@@ -1,5 +1,9 @@
 <script setup>
-  textarea.addEventListener('keydown', (e) => {
+  import {ref} from "vue";
+
+  let textarea = ref(null);
+  console.log(textarea.value) //null, the textarea has not been yet mounted to the page
+  /*textarea.addEventListener('keydown', (e) => {
    //tab was pressed
    if (e.keyCode === 9) {
      // get caret position/selection
@@ -15,13 +19,13 @@
 
      e.preventDefault();
    }
-  });
+  });*/
 </script>
 
 <template>
   <main>
     <form >
-      <textarea style="width: 100%; height: 300px">Hi there</textarea>
+      <textarea ref="textarea" style="width: 100%; height: 300px">Hi there</textarea>
     </form>
   </main>
 </template>
