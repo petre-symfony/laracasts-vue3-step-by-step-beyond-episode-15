@@ -1,11 +1,8 @@
 <script>
-import swal from "sweetalert";
+import flash from "@/mixins/flash.js";
+
 export default {
-  methods: {
-    flash(message) {
-      swal(message)
-    }
-  }
+  mixins: [flash]
 }
 </script>
 

@@ -1,10 +1,8 @@
 <script>
+import flash from "@/mixins/flash.js";
+
   export default {
-    methods: {
-      flash(message) {
-        alert(message)
-      }
-    }
+    mixins: [flash]
   }
 </script>
 
