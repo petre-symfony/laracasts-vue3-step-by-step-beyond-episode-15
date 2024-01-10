@@ -7,11 +7,8 @@
 
 <template>
   <main>
-    <p>
-      What is your favorite food? <input type="text" v-model="food" >
-    </p>
-    <p>
-      How old are you? <input type="text" v-model="age">
-    </p>
+    <form >
+      <textarea style="width: 100%; height: 300px">Hi there</textarea>
+    </form>
   </main>
 </template>
