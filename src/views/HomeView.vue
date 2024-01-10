@@ -1,8 +1,11 @@
 <script setup>
-  import {ref} from "vue";
+  import {ref, onMounted } from "vue";
 
   let textarea = ref(null);
-  console.log(textarea.value) //null, the textarea has not been yet mounted to the page
+
+  onMounted(() => {
+    console.log(textarea.value);
+  })
   /*textarea.addEventListener('keydown', (e) => {
    //tab was pressed
    if (e.keyCode === 9) {
