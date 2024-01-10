@@ -7,6 +7,10 @@
  function write(key, value) {
    localStorage.setItem(key, value);
  }
+
+ setTimeout(() => {
+   food.value = 'changed'
+ }, 2000)
 </script>
 
 <template>
