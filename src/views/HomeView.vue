@@ -1,13 +1,7 @@
-<script>
-import { useFlash } from "@/composables/useFlash.js";
+<script setup>
+ import { useFlash } from "@/composables/useFlash.js";
 
-  export default {
-    setup(){
-      let { flash } = useFlash();
-
-      return { flash }
-    }
-  }
+  let { flash } = useFlash();
 </script>
 
 <template>
