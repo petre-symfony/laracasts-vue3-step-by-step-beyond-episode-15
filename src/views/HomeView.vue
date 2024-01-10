@@ -1,8 +1,21 @@
 <script setup>
- import { useStorage } from "@/composables/useStorage.js";
+  textarea.addEventListener('keydown', (e) => {
+   //tab was pressed
+   if (e.keyCode === 9) {
+     // get caret position/selection
+     let val = textarea.value,
+         start = textarea.selectionStart,
+         end = textarea.selectionEnd;
 
- let food = useStorage('food');
- let age = useStorage('age')
+     //set textarea value to: text before caret + tab + text after caret
+     textarea.value = val.substring(0, start) + "\t" + val.substring(end);
+
+     //got caret at right position again
+     textarea.selectionStart = textarea.selectionEnd = start + 1;
+
+     e.preventDefault();
+   }
+  });
 </script>
 
 <template>
