@@ -1,7 +1,7 @@
 <script setup>
  import { ref } from "vue";
 
- let food = ref('');
+ let food = ref(localStorage.getItem('food'));
 
  function write() {
    localStorage.setItem('food', food.value);
