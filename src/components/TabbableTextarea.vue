@@ -3,6 +3,10 @@ defineProps({
   modelValue: String
 });
 
+let emit = defineEmits([
+  'update:modelValue'
+])
+
 function onTabPress(e) {
   let textarea = e.target;
 
@@ -14,11 +18,16 @@ function onTabPress(e) {
 
   textarea.selectionStart = textarea.selectionEnd = start + 1;
 }
+
+function update(e) {
+  emit('update:modelValue', e.target.value);
+}
 </script>
 
 <template>
   <textarea
       @keydown.tab.prevent="onTabPress"
+      @keyup="update"
       v-text="modelValue"
   />
 </template>
