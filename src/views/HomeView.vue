@@ -6,7 +6,7 @@
 
  let obj = useStorage('obj', { one: 'one'})
  setTimeout(() => {
-   obj.value.one = 'changed'
+   obj.value = {'changed': 'entirely'}
  }, 2000);
 </script>
 
