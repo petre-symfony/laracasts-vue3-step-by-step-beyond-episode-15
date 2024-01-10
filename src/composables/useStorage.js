@@ -1,7 +1,7 @@
 import { ref, watch } from "vue";
 
 export function useStorage(key, val=null) {
-  let storedVal = localStorage.getItem(key);
+  let storedVal = read();
 
   if (storedVal) {
     val = ref(storedVal)
@@ -10,15 +10,18 @@ export function useStorage(key, val=null) {
 
     write();
   }
-  watch(val, () => {
-    write()
-  })
+
+  watch(val, write)
+
+  function read() {
+    return JSON.parse(localStorage.getItem(key));
+  }
 
   function write() {
     if (val.value === null || val.value === ''){
       localStorage.removeItem(key);
     } else {
-      localStorage.setItem(key, val.value);
+      localStorage.setItem(key, JSON.stringify(val.value));
     }
   }
 
