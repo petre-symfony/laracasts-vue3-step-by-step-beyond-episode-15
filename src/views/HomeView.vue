@@ -16,16 +16,13 @@
 
     //got caret at right position again
     t.selectionStart = t.selectionEnd = start + 1;
-
-    e.preventDefault();
-
   }
 </script>
 
 <template>
   <main>
     <form >
-      <textarea ref="textarea" @keydown.tab="onTabPress" style="width: 100%; height: 300px">Hi there</textarea>
+      <textarea ref="textarea" @keydown.tab.prevent="onTabPress" style="width: 100%; height: 300px">Hi there</textarea>
     </form>
   </main>
 </template>
