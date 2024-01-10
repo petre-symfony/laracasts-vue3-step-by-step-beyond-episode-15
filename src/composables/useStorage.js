@@ -11,7 +11,7 @@ export function useStorage(key, val=null) {
     write();
   }
 
-  watch(val, write)
+  watch(val, write, {deep: true});
 
   function read() {
     return JSON.parse(localStorage.getItem(key));
