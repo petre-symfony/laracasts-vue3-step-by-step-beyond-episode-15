@@ -6,7 +6,7 @@
 
   defineProps({quiz: Object})
 
-  provide('key', 'value');
+  provide('key', 'Hello There');
 </script>
 
 <template>
