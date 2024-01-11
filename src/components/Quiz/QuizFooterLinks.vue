@@ -4,8 +4,9 @@
 
 <template>
   <div>
-    <h1>{{ state.name }}</h1>
+    <h5>{{ state.name }}</h5>
 
+    <button @click="state.name = 'A new quiz name'">Change Quiz Name</button>
     <ul>
       <li><a href="">Get a Job</a></li>
       <li><a href="">Contact Us</a></li>
