@@ -6,6 +6,10 @@
   })
 
   let name = inject('name');
+
+  setTimeout(() => {
+    name.value = 'A new name'
+  }, 2000)
 </script>
 
 <template>
