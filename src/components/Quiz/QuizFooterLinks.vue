@@ -1,12 +1,10 @@
 <script setup>
-  import { inject } from "vue";
-
-  let quiz = inject('quiz');
+  import { state } from "@/stores/quizStore.js";
 </script>
 
 <template>
   <div>
-    <h1>{{ quiz.name }}</h1>
+    <h1>{{ state.name }}</h1>
 
     <ul>
       <li><a href="">Get a Job</a></li>
