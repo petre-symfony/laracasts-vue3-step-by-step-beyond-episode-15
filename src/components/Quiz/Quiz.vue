@@ -8,7 +8,10 @@
 
   let name = ref('John Doe');
 
-  provide('name', name);
+  provide('name', {
+    name,
+    changeName: () => { name.value = 'changed'}
+  });
 </script>
 
 <template>

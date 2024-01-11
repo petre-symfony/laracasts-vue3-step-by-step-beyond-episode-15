@@ -5,16 +5,14 @@
     quiz: Object
   })
 
-  let name = inject('name');
+  let { name, changeName } = inject('name');
 
-  setTimeout(() => {
-    name.value = 'A new name'
-  }, 2000)
+
 </script>
 
 <template>
   <div>
-    <h5>{{ name }}</h5>
+    <button @click="changeName">{{ name }}</button>
 
     <ul>
       <li><a href="">Get a Job</a></li>
