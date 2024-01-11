@@ -10,7 +10,6 @@
 </script>
 
 <template>
-  <h1>{{ quiz.name }}</h1>
   <QuizHeader />
 
   <QuizQuestion />
