@@ -1,17 +1,11 @@
 <script setup>
-  import TabbableTextarea from "@/components/TabbableTextarea.vue";
   import Quiz from "@/components/Quiz/Quiz.vue";
-  import {ref} from "vue";
 
-  let comment = ref('test value');
-
-  setTimeout(() => {
-    comment.value = 'It work!'
-  }, 3000)
+  let state = {name: 'My First Quiz', questions: []};
 </script>
 
 <template>
   <main>
-    <Quiz :quiz="{name: 'My First Quiz', questions: []}" />
+    <Quiz :quiz="state" />
   </main>
 </template>
