@@ -5,12 +5,12 @@
     quiz: Object
   })
 
-  let key = inject('key');
+  let name = inject('name');
 </script>
 
 <template>
   <div>
-    <h5>{{ key }}</h5>
+    <h5>{{ name }}</h5>
 
     <ul>
       <li><a href="">Get a Job</a></li>
