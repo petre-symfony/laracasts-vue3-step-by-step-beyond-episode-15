@@ -1,18 +1,12 @@
 <script setup>
   import { inject } from "vue";
 
-  defineProps({
-    quiz: Object
-  })
-
-  let { name, changeName } = inject('name');
-
-
+  let quiz = inject('quiz');
 </script>
 
 <template>
   <div>
-    <button @click="changeName">{{ name }}</button>
+    <h1>{{ quiz.name }}</h1>
 
     <ul>
       <li><a href="">Get a Job</a></li>
