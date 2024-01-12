@@ -8,7 +8,9 @@ export let useCounterStore = defineStore('counter', {
   },
   actions: {
     increment() {
-      this.count++
+      if (this.count < 10) {
+        this.count++
+      }
     }
   }
 })
