@@ -6,6 +6,9 @@ export let counter = reactive({
 
   //actions
   increment() {
+    if (this.count > 10) {
+      return;
+    }
     this.count += 1;
   }
 })
