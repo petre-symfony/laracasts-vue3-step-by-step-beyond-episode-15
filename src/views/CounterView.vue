@@ -1,0 +1,9 @@
+<script setup>
+
+</script>
+
+<template>
+  <div>
+    <h1>{{ count }}</h1>
+  </div>
+</template>
